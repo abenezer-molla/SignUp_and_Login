@@ -3,7 +3,7 @@ from __future__ import with_statement
 import logging
 from logging.config import fileConfig
 
-from models import User
+#from models import User
 
 from flask import current_app
 

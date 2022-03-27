@@ -5,7 +5,7 @@ from exts import db
     username:string
     email:string
     password:string
-"""
+""" 
 
 class User(db.Model):
     id=db.Column(db.Integer,primary_key=True)
