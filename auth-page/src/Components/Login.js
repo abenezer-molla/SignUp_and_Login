@@ -31,13 +31,14 @@ const Login=()=>{
        .then(data=>{
            console.log(data.access_token)
            
-           if (data){
+           if (data.access_token){
 
             console.log("access token is", data.access_token)
 
             login(data.access_token)
             
             navigate('/')
+
            }
            else{
                alert('Invalid username or password')
@@ -56,13 +57,11 @@ const Login=()=>{
             <h2 className = "text-center mb-4 "> Login</h2>
             <Form>
                 <Form.Group id = "email">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>Username</Form.Label>
                     <Form.Control 
-                    type = "email" 
-                    placeholder='Email' 
-                    
-                    name = "email"  r
-                    {...register('email',{required:true})}
+                    type = "username" 
+                    placeholder='username' 
+                    {...register('username',{required:true})}
                     />
                 </Form.Group>
 
@@ -71,8 +70,6 @@ const Login=()=>{
                     <Form.Control 
                     type = "password" 
                     placeholder='Password' 
-                    
-                    name = "password" 
                     {...register('password',{required:true})}
                     required/>
                 </Form.Group>
